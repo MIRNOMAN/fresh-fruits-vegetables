@@ -1,6 +1,7 @@
 import Products from "../components/ui/Products.jsx";
 import Header from "../components/shared/Header.jsx";
 import AboutUs from "../components/ui/AboutUs.jsx";
+import FruitBundle from "../components/ui/FruitBundle.jsx";
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
    <Header/>
    <Products/>
    <AboutUs/>
+   <FruitBundle/>
     </div>
   );
 }
