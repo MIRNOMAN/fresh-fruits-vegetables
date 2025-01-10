@@ -1,7 +1,6 @@
 "use client"
 
-import logo from "../../assets/Logo.png";
-import logoName from "../../assets/Fresh Harvests.png";
+import logo from "../../assets/Logo (1).png";
 import heart from "../../assets/Heart.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -44,8 +43,11 @@ const Navbar = () => {
             </ul>
           </div>
          <div className="flex justify-center gap-2">
-         <Image src={logo} style={{ width: '25%', height: 'auto' }}  alt="Logo" />
-         <Image src={logoName} width={80} height={50} alt="Fresh Harvests Logo" />
+         <Image
+        src={logo}
+        alt="logo picture"
+      className="h-[40px] mx-auto mt-2 md:h-[50px] lg:ml-2  lg:h-[50px] w-[100px] md:w-[130px] lg:w-[140px] "
+     />
          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -74,19 +76,18 @@ const Navbar = () => {
     <div className="indicator">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5"
+        className="h-5 w-5 text-[#749B3F]"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
       >
         <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          
           strokeWidth="2"
           d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
         />
       </svg>
-      <span className="badge badge-sm indicator-item">8</span>
+      <span className="badge badge-sm indicator-item bg-[#EE4536] text-white">8</span>
     </div>
     <h1>Cart</h1>
   </div>
