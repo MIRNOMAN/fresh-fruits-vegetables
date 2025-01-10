@@ -1,10 +1,10 @@
+import Header from "../components/shared/Header.jsx";
 
 
 export default function Home() {
   return (
     <div className="">
-   
-       <h1>This is page</h1>
+   <Header/>
     </div>
   );
 }

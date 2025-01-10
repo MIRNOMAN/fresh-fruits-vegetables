@@ -1,5 +1,4 @@
 
-import Image from "next/image";
 import bg from "../../../src/assets/Bg.png"
 
 const Header = () => {
