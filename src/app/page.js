@@ -4,7 +4,7 @@ import Header from "../components/shared/Header.jsx";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="bg-white">
    <Header/>
    <Products/>
     </div>
