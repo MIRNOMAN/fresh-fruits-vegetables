@@ -23,6 +23,10 @@ const Products = () => {
 
             <div >
                 <CustomCard />
+
+                <div className="flex justify-center items-center my-7">
+                <button className="btn btn-outline border-[#FF6A1A] text-[#FF6A1A] hover:bg-[#FF6A1A] hover:border-0 hover:text-white">See All Products</button>
+                </div>
             </div>
         </div>
     );

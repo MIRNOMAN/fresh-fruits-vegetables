@@ -1,5 +1,6 @@
 import Products from "../components/ui/Products.jsx";
 import Header from "../components/shared/Header.jsx";
+import AboutUs from "../components/ui/AboutUs.jsx";
 
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div className="bg-white">
    <Header/>
    <Products/>
+   <AboutUs/>
     </div>
   );
 }
