@@ -44,7 +44,7 @@ const Navbar = () => {
             </ul>
           </div>
          <div className="flex justify-center gap-2">
-         <Image src={logo} style={{ width: '30%', height: 'auto' }}  alt="Logo" />
+         <Image src={logo} style={{ width: '25%', height: 'auto' }}  alt="Logo" />
          <Image src={logoName} width={80} height={50} alt="Fresh Harvests Logo" />
          </div>
         </div>
