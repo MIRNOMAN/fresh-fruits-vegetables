@@ -5,7 +5,7 @@ import BlogCart from "../../components/shared/BlogCart"
 
 const OurBlog = () => {
     return (
-        <div>
+        <div className="lg:pb-20 pb-7">
             <div className="lg:flex lg:justify-end lg:mt-20 items-end">
                     <div className="lg:w-[80%] lg:pl-[15%]">
                     <h3 className="text-xs mx-auto  mt-11 lg:text-lg font-bold text-[#749B3F] border p-1 lg:w-[130px] w-[120px] text-center rounded-lg bg-gray-200">

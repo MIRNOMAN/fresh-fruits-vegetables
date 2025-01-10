@@ -15,19 +15,19 @@ const Testimonial = () => {
             <p className="text-[#4A4A52] text-center mt-3">say about their experience with Fresh Harvest</p>
             </div>
 
-            <div className='lg:flex justify-center items-center  lg:mx-12'>
-                <div className='lg:w-[50%]'>
+            <div className='lg:flex md:flex justify-center items-center  lg:mx-12'>
+                <div className='lg:w-[50%] md:w-[50%]'>
               <Image
                 src={testimonial1}
                 alt="testimonial picture"
                 className=" h-[500px] md:h-[550px] lg:ml-2 lg:h-[700px] w-[700px] md:w-[350px]  lg:w-[500px] p-2"
               /> 
                 </div>
-                <div className='lg:w-[50%]'>
+                <div className='lg:w-[50%] md:w-[50%]'>
                 <Image
                     src={testimonial2}
                     alt="descrription picture"
-                    className=" h-full md:h-[150px] lg:ml-2 lg:h-[500px] w-full md:w-[250px]  lg:w-full p-2"
+                    className=" h-full md:h-[400px] lg:ml-2 lg:h-[500px] w-full md:w-[550px]  lg:w-full p-2"
                 />
                 </div>
             </div>

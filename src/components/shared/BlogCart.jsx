@@ -2,7 +2,7 @@
 
 const BlogCart = () => {
     return (
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-7 lg:mx-14 mx-3">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-7 md:gap-5 lg:mx-14 mx-3">
             <div className="card card-compact bg-base-100 w-full ">
   <figure>
     <img
