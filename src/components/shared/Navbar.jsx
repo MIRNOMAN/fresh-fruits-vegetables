@@ -5,10 +5,37 @@ import logo from "../../assets/Logo (1).png";
 import heart from "../../assets/Heart.png";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
+import { loginUser } from "../../utils/actions/loginUser";
 
-const Navbar = () => {
+const Navbar = ({session}) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+
   const [isScrolled, setIsScrolled] = useState(false)
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const router = useRouter();
+
+  const onSubmit = async (data) => {
+    try {
+      const res = await loginUser(data)
+  if(res.accessToken){
+    alert(res.message);
+    localStorage.setItem('accessToken',res.accessToken);
+    router.push("/")
+  }
+    } catch (err) {
+      console.error(err.message);
+      throw new Error(err.message);
+    }
+  };
+
 
   const toggleDropdown = () => {
     setDropdownOpen((prev) => !prev);
@@ -51,10 +78,10 @@ const Navbar = () => {
   ];
 
   return (
-    <div className={`fixed top-0 lg:px-[90px] w-full z-50 ${isScrolled  ? "bg-white" : "bg-transparent"}`}>
+    <div className={`fixed top-0 lg:px-[90px] w-full  ${isScrolled  ? "bg-white" : "bg-transparent"}`}>
       <div className="navbar">
         {/* Navbar Start */}
-        <div className="navbar-start">
+        <div className="navbar-start ">
           {/* Mobile Dropdown */}
           <div className="dropdown">
             <div
@@ -149,7 +176,7 @@ const Navbar = () => {
 
           {/* Login Dropdown */}
           <div className="relative">
-            <button
+            <button 
               onClick={toggleDropdown}
               className="btn btn-outline md:px-7 px-5"
               aria-label="Login Dropdown" 
@@ -206,13 +233,14 @@ const Navbar = () => {
         <h2 className="text-2xl lg:text-3xl text-center font-semibold text-gray-700">
           Login
         </h2>
-        <form className="mt-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="mt-4">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email</span>
             </label>
             <input
-              type="email"
+               type="email"
+               {...register("email")}
               placeholder="email"
               className="input input-bordered w-full"
               required
@@ -223,7 +251,8 @@ const Navbar = () => {
               <span className="label-text">Password</span>
             </label>
             <input
-              type="password"
+               {...register("password")}
+                type="password"
               placeholder="password"
               className="input input-bordered w-full"
               required
@@ -293,7 +322,7 @@ const Navbar = () => {
 
         <p className="mt-4 text-center text-sm text-gray-600">
           Don't have an account?{" "}
-          <Link  className="text-blue-500">
+          <Link href="/register"  className="text-blue-500">
             Sign Up
           </Link>
         </p>

@@ -5,7 +5,7 @@ const page = () => {
     return (
        
        <div >
-        <h1 className='text-black mt-7 text-2xl text-center'>All Products show</h1>
+        <h1 className='text-black  text-2xl mt-20  text-center'>All Products show</h1>
        </div>
     );
 };

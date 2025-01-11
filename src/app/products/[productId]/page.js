@@ -17,7 +17,7 @@ const ProductDetailsPage = async({params}) => {
        const productCategory = await categoryRes.json();
        
   return (
-    <div className='bg-white lg:px-20 px-4'>
+    <div className='bg-white lg:px-20 mt-20 px-4'>
     <section className="py-8 bg-white md:py-16 text-black antialiased">
 <div className="max-w-screen-xl px-4 mx-auto 2xl:px-0">
  <div className="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
